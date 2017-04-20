@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -76,7 +76,6 @@
                                 <state key="normal" title="Get"/>
                                 <connections>
                                     <action selector="getDefaultString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ywp-FR-M6P"/>
-                                    <action selector="saveDefaultString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nnN-2O-hUJ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="String to save in Core Data" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nxx-54-3k5">
@@ -92,15 +91,14 @@
                                 <rect key="frame" x="243" y="208" width="46" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="saveDefaultString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3S7-Q6-Mld"/>
+                                    <action selector="saveCoreDataString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4UQ-hm-aW1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpp-KM-eI8">
                                 <rect key="frame" x="243" y="246" width="46" height="30"/>
                                 <state key="normal" title="Get"/>
                                 <connections>
-                                    <action selector="getDefaultString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TyW-Qw-2x2"/>
-                                    <action selector="saveDefaultString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lA9-Ux-phr"/>
+                                    <action selector="getCoreDataString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsS-ND-1Pa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPd-RB-5yb">
@@ -148,12 +146,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="savedCoreDataTextField" destination="Nxx-54-3k5" id="QZJ-E6-EcP"/>
                         <outlet property="savedTextField" destination="2DU-Cf-htm" id="562-ws-Xe8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.75" y="135.21126760563379"/>
+            <point key="canvasLocation" x="86.71875" y="150.30985915492957"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_0.fullscreen"/>
+    </simulatedMetricsContainer>
 </document>

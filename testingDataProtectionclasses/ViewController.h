@@ -7,10 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
 @interface ViewController : UIViewController
 
 @property (nonatomic, retain) IBOutlet UITextField *savedTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *savedCoreDataTextField;
+
+@property (strong) NSManagedObject *contactdb;
+@property (strong) NSMutableArray *coreDataStrings;
+
 
 @end
 

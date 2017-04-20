@@ -7,6 +7,10 @@
 //
 
 #import "ViewController.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+
 
 @interface ViewController ()
 
@@ -15,12 +19,23 @@
 
 @implementation ViewController
 
+@synthesize contactdb;
 @synthesize savedTextField;
+@synthesize coreDataStrings;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     savedTextField.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"savedNSUserDefaults"];
+    
+    // Fetch the devices from persistent data store
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"TestStorage"];
+    
+    self.coreDataStrings = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    NSLog(@"%s", &"Count of coreDataStrings" [ [coreDataStrings count]]);
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -194,6 +209,48 @@
     NSLog(@"%@", [NSString stringWithFormat:@"NSUserDefaultNumber is: %ld", (long)userNumber]);
 
 }
+
+- (IBAction)saveCoreDataString:(id)sender {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    if (self.contactdb) {
+        // Update existing device
+        [self.contactdb setValue:self.savedCoreDataTextField.text forKey:@"testString"];
+
+        
+    } else {
+        // Create a new device
+        NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"TestStorage" inManagedObjectContext:context];
+        [newDevice setValue:self.savedCoreDataTextField.text forKey:@"testString"];
+
+    }
+    
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+                                
+}
+- (IBAction)getCoreDataString:(id)sender {
+    
+    
+}
+
+// MARK: For coredata
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
+
 
 
 @end

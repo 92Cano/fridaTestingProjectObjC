@@ -16,8 +16,12 @@
 		0DFC6E571C9F40860030F0C6 /* testingDataProtectionclassesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFC6E561C9F40860030F0C6 /* testingDataProtectionclassesTests.m */; };
 		0DFC6E621C9F40860030F0C6 /* testingDataProtectionclassesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFC6E611C9F40860030F0C6 /* testingDataProtectionclassesUITests.m */; };
 		0DFC6E701CA69D070030F0C6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFC6E6F1CA69D070030F0C6 /* Security.framework */; };
+		311BF3AA1E806EB6004C2388 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311BF3A91E806EB6004C2388 /* CoreData.framework */; };
+		311BF3AE1E806F0B004C2388 /* testingDataProtectionclasses.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 311BF3AC1E806F0B004C2388 /* testingDataProtectionclasses.xcdatamodeld */; };
 		317FA2911E799FC200C7C143 /* Frameworks in Resources */ = {isa = PBXBuildFile; fileRef = 317FA2901E799FC200C7C143 /* Frameworks */; };
 		317FA2941E79A23400C7C143 /* FridaGadget.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 317FA2931E79A23400C7C143 /* FridaGadget.dylib */; };
+		31B6E3F71E81B73C0063C02E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B6E3F61E81B73C0063C02E /* UIKit.framework */; };
+		31B6E3F91E81B75D0063C02E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B6E3F81E81B75D0063C02E /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +59,13 @@
 		0DFC6E611C9F40860030F0C6 /* testingDataProtectionclassesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testingDataProtectionclassesUITests.m; sourceTree = "<group>"; };
 		0DFC6E631C9F40860030F0C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DFC6E6F1CA69D070030F0C6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		311BF3A91E806EB6004C2388 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		311BF3AD1E806F0B004C2388 /* testingDataProtectionclasses.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = testingDataProtectionclasses.xcdatamodel; sourceTree = "<group>"; };
 		317FA2901E799FC200C7C143 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
 		317FA2931E79A23400C7C143 /* FridaGadget.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = FridaGadget.dylib; path = testingDataProtectionclasses/Frameworks/FridaGadget.dylib; sourceTree = "<group>"; };
+		31B6E3F61E81B73C0063C02E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		31B6E3F81E81B75D0063C02E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		31B6E3FA1E81BB1C0063C02E /* ViewController.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +73,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B6E3F91E81B75D0063C02E /* Foundation.framework in Frameworks */,
+				31B6E3F71E81B73C0063C02E /* UIKit.framework in Frameworks */,
+				311BF3AA1E806EB6004C2388 /* CoreData.framework in Frameworks */,
 				0DFC6E701CA69D070030F0C6 /* Security.framework in Frameworks */,
 				317FA2941E79A23400C7C143 /* FridaGadget.dylib in Frameworks */,
 			);
@@ -120,6 +132,7 @@
 				0DFC6E481C9F40860030F0C6 /* Assets.xcassets */,
 				0DFC6E4A1C9F40860030F0C6 /* LaunchScreen.storyboard */,
 				0DFC6E4D1C9F40860030F0C6 /* Info.plist */,
+				311BF3AC1E806F0B004C2388 /* testingDataProtectionclasses.xcdatamodeld */,
 				0DFC6E3C1C9F40860030F0C6 /* Supporting Files */,
 			);
 			path = testingDataProtectionclasses;
@@ -128,6 +141,7 @@
 		0DFC6E3C1C9F40860030F0C6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				31B6E3FA1E81BB1C0063C02E /* ViewController.pch */,
 				0DFC6E3D1C9F40860030F0C6 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -154,6 +168,9 @@
 		317FA2921E79A23400C7C143 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				31B6E3F81E81B75D0063C02E /* Foundation.framework */,
+				31B6E3F61E81B73C0063C02E /* UIKit.framework */,
+				311BF3A91E806EB6004C2388 /* CoreData.framework */,
 				317FA2931E79A23400C7C143 /* FridaGadget.dylib */,
 			);
 			name = Frameworks;
@@ -291,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				311BF3AE1E806F0B004C2388 /* testingDataProtectionclasses.xcdatamodeld in Sources */,
 				0DFC6E441C9F40860030F0C6 /* ViewController.m in Sources */,
 				0DFC6E411C9F40860030F0C6 /* AppDelegate.m in Sources */,
 				0DFC6E3E1C9F40860030F0C6 /* main.m in Sources */,
@@ -384,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -421,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -436,7 +454,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = T3TD67JAQ2;
 				INFOPLIST_FILE = testingDataProtectionclasses/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,7 +474,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = T3TD67JAQ2;
 				INFOPLIST_FILE = testingDataProtectionclasses/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -556,6 +574,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		311BF3AC1E806F0B004C2388 /* testingDataProtectionclasses.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				311BF3AD1E806F0B004C2388 /* testingDataProtectionclasses.xcdatamodel */,
+			);
+			currentVersion = 311BF3AD1E806F0B004C2388 /* testingDataProtectionclasses.xcdatamodel */;
+			name = testingDataProtectionclasses.xcdatamodeld;
+			path = ../testingDataProtectionclasses.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0DFC6E311C9F40860030F0C6 /* Project object */;
 }
